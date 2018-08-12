@@ -1,0 +1,71 @@
+﻿<!-- Site wrapper -->
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <a ui-sref="home" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>PN</b></span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>Pet</b>Net</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="javascript:void(0);" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="{{authentication.image}}" class="user-image" alt="ảnh đại diện"/>
+                            <span class="hidden-xs">{{authentication.userName}}</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="{{authentication.image}}" class="img-circle" alt="ảnh đại diện"/>
+                                <p>
+                                    {{authentication.userName}}
+                                    <small>{{authentication.createdDate | date: 'dd/MM/yyyy'}}</small>
+                                </p>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-right">
+                                    <a href="#" ng-click="logOut()" class="btn btn-default btn-flat">Đăng xuất</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Control Sidebar Toggle Button -->
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- =============================================== -->
+    <!-- Left side column. contains the sidebar -->
+    <aside class="main-sidebar" ng-include="sidebar">
+    </aside>
+    <!-- =============================================== -->
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <div ui-view></div>
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Phiên bản</b> thử nghiệm
+        </div>
+        <strong>Copyright &copy; 2016-2017 <a href="http://PetNet.com">PetNet Shop</a>.</strong> All rights
+        reserved.
+    </footer>
+</div>
+<!-- ./wrapper -->
